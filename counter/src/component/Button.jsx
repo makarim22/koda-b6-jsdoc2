@@ -21,7 +21,7 @@ const CustomButton = ({ type, onClick, disabled = false, className, ...otherProp
                 disabled={disabled}
                 {...otherProps} 
             >
-                Add
+                +
             </button>
         );
     } else if (type === 'substract') { 
@@ -33,7 +33,7 @@ const CustomButton = ({ type, onClick, disabled = false, className, ...otherProp
                 disabled={disabled}
                 {...otherProps} 
             >
-                Subtract
+                -
             </button>
         );
     } else {

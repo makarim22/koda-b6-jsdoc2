@@ -6,4 +6,3 @@ import tailwindscss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindscss()],
 })
-localStorage

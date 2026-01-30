@@ -21,35 +21,32 @@ function Counter() {
         setCount(prevCount => prevCount - 1);
     };
 
-    return (
-        <>
-            <div className='main'>
-                <div className='title'>
-                    <p>Simple Counter</p>
+     return (
+        <div className='flex items-center justify-center min-h-screen bg-gray-100 p-4'> 
+            <div className='bg-white p-8 rounded-lg shadow-xl border border-gray-200 w-full max-w-sm text-center'> 
+                <div className='title mb-6'>
+                    <p className='text-3xl font-bold text-gray-800 tracking-tight'>Simple Counter</p>
                 </div>
 
-                <div className='button'>
-                    <CustomButton
-                        onClick={handleAdd}
-                        type="add"
-                        color="success"
-                    >
-                        Tambah
-                    </CustomButton>
-
-                    <p>{count}</p>
-
+                <div className='flex items-center justify-center space-x-6'> 
                     <CustomButton
                         onClick={handleSubtract}
-                        type="substract"
+                        type="substract" 
                         color="danger"
                         disabled={count === 0}
-                    >
-                        Kurang
-                    </CustomButton>
+                    />
+                    <p className='text-4xl font-extrabold text-gray-500 min-w-[70px]'> 
+                        {count}
+                    </p>
+                    <CustomButton
+                        onClick={handleAdd}
+                        type="add" 
+                        color="success"
+                    />
                 </div>
+
             </div>
-        </>
+        </div>
     );
 }
 
